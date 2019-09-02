@@ -52,7 +52,7 @@ def hello_world():
 
 if __name__ == '__main__':
     app.run(
-        debug=environ.get("DEBUG", True),
+        debug=False,
         host="0.0.0.0",
-        port=environ.get("PORT", 13667),
+        port=int(environ.get("PORT", 13667)),
     )
